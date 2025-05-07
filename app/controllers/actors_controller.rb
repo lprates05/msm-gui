@@ -14,4 +14,17 @@ class ActorsController < ApplicationController
       
     render({ :template => "actor_templates/show" })
   end
+
+  def create_new_actor
+      new_actor = Director.new
+  
+      new_actor.name = params.fetch("new_actor_name")
+      new_actor.dob = params.fetch("new_actor_dob")
+      new_actor.bio = params.fetch("new_actor_bio")
+      new_actor.image = params.fetch("new_actor_image")
+  
+      new_actor.save
+  
+     redirect_to("/actors")
+   end
 end
