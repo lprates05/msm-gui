@@ -16,7 +16,7 @@ class ActorsController < ApplicationController
   end
 
   def create_new_actor
-      new_actor = Director.new
+      new_actor = Actor.new
   
       new_actor.name = params.fetch("new_actor_name")
       new_actor.dob = params.fetch("new_actor_dob")
