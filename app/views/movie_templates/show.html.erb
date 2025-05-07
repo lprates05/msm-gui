@@ -5,7 +5,41 @@
 <a href="/movies">
   Go back
 </a>
+<p>
+<a href="/delete_movie/<%= @the_movie.id %>">
+  Delete movie
+</a>
+ </p>
 
+<hr>
+<form action="/update_movie" method="post">
+  <p>
+  <label for="updated_movie_title">Title</label>
+  <input type="text" id="updated_movie_title" name="updated_movie_title" value="American Fiction"></input>
+  </p>
+  <p>
+  <label for="updated_movie_year">Year</label>
+  <input type="text" id="updated_movie_year" name="updated_movie_year" value="1978"></input>
+  </p>
+  <p>
+  <label for="updated_movie_duration">Duration</label>
+  <input type="text" id="updated_movie_duration" name="updated_movie_duration" value="120"></input>
+  </p>
+  <label for="updated_movie_description">Description</label>
+  <input type="text" id="updated_movie_description" name="updated_movie_description" value="A novelist fed up with the establishment profiting from "Black" entertainment uses a pen name to write a book that propels him into the heart of hypocrisy and the madness he claims to disdain"></input>
+  </p>
+
+  </p>
+  <label for="updated_movie_image">Image</label>
+  <input type="text" id="updated_movie_image" name="updated_movie_image" value="https://image.tmdb.org/t/p/w500/57MFWGHarg9jid7yfDTka4RmcMU.jpg"></input>
+  </p>
+
+  </p>
+  <label for="updated_movie_director_id">Director ID</label>
+  <input type="text" id="updated_movie_director_id" name="updated_movie_director_id" value="1893777"></input>
+  </p>  
+  <button>Update movie</button>
+</form>
 <hr>
 
 <dl>
