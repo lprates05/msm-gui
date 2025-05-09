@@ -134,7 +134,11 @@
         
         <% the_director = matching_directors.at(0) %>
 
-        <%= the_director.name %>
+        <% if the_director !=nil  %>
+          <%= the_director.name %>
+        <% else  %>
+          Uh oh! We weren't able to find a director for this movie.
+         <% end  %>
       </td>
 
       <td>
