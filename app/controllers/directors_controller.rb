@@ -64,14 +64,17 @@ class DirectorsController < ApplicationController
   end
 
   def update_director
-    updated_director = Director.new
+    d_id = params.fetch("the_id")
+
+    matching_records = Director.where({:id => d_id})
+    the_director = matching_records.at(0)
  
-    updated_director.name = params.fetch("updated_director_name")
-    updated_director.dob = params.fetch("updated_director_dob")
-    updated_director.bio = params.fetch("updated_director_bio")
-    updated_director.image = params.fetch("updated_director_image")  
-    updated_director.save
+    the_director.name = params.fetch("the_name")
+    the_director.dob = params.fetch("the_dob")
+    the_director.bio = params.fetch("the_bio")
+    the_director.image = params.fetch("the_image")
+    the_director.save
   
-     redirect_to("/directors")
+    redirect_to("/directors/#{the_director.id}")
    end
 end

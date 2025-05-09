@@ -13,23 +13,23 @@
  </p>
 
 <hr>
-<form action="/update_director" method="post">
+<form action="/update_director/<%= @the_director.id %>" method="post">
   <p>
   <label for="update_director_name">Name</label>
-  <input type="text" id="update_director_name" name="update_director_name" value="Brian A. Miller"></input>
+  <input type="text" id="update_director_name" name="the_name" value="<%= @the_director.name %>"></input>
   </p>
   <p>
   <label for="update_director_dob">Dob</label>
-  <input type="text" id="update_director_dob" name="update_director_dob" value="01/01/1970"></input>
+  <input type="text" id="update_director_dob" name="the_dob" value="<%= @the_director.dob %>"></input>
   </p>
   <p>
   <label for="update_director_bio">Bio</label>
-  <input type="text" id="update_director_bio" name="update_director_duration" value="Brian A. Miller is a Los Angeles based feature film writer and director known for Reprisal (2018), Backtrace, Vice (2015), The Prince (2014), and Officer Down (2015) and the upcoming Price of Valor. He's worked with such name actors as Sylvester Stallone, Bruce Willis, John Cusack, Jason Patric, James Woods, Matthew Modine and Dave Bautista."></input>
+  <input type="text" id="update_director_bio" name="the_bio" value="<%= @the_director.bio %>"></input>
   </p>
   
   <p>
   <label for="updated_director_image">Image</label>
-  <input type="text" id="updated_director_image" name="updated_director_image" value="https://some.test/image-1746793184.jpg"></input>
+  <input type="text" id="updated_director_image" name="the_image" value="<%= @the_director.image %>"></input>
   </p>
 
   
