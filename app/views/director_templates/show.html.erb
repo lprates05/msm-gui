@@ -6,6 +6,35 @@
   Go back
 </a>
 
+<p>
+<a href="/delete_director/<%= @the_director.id %>">
+  Delete director
+</a>
+ </p>
+
+<hr>
+<form action="/update_director" method="post">
+  <p>
+  <label for="update_director_name">Name</label>
+  <input type="text" id="update_director_name" name="update_director_name" value="Brian A. Miller"></input>
+  </p>
+  <p>
+  <label for="update_director_dob">Dob</label>
+  <input type="text" id="update_director_dob" name="update_director_dob" value="01/01/1970"></input>
+  </p>
+  <p>
+  <label for="update_director_bio">Bio</label>
+  <input type="text" id="update_director_bio" name="update_director_duration" value="Brian A. Miller is a Los Angeles based feature film writer and director known for Reprisal (2018), Backtrace, Vice (2015), The Prince (2014), and Officer Down (2015) and the upcoming Price of Valor. He's worked with such name actors as Sylvester Stallone, Bruce Willis, John Cusack, Jason Patric, James Woods, Matthew Modine and Dave Bautista."></input>
+  </p>
+  
+  <p>
+  <label for="updated_director_image">Image</label>
+  <input type="text" id="updated_director_image" name="updated_director_image" value="https://image.tmdb.org/t/p/w500/57MFWGHarg9jid7yfDTka4RmcMU.jpg"></input>
+  </p>
+
+  
+  <button>Update director</button>
+</form>
 <hr>
 
 <dl>
