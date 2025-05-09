@@ -56,9 +56,9 @@ class DirectorsController < ApplicationController
 
     matching_records = Director.where({:id => the_id})
 
-    the_movie = matching_records.at(0)
+    the_director = matching_records.at(0)
 
-    the_movie.destroy
+    the_director.destroy
 
     redirect_to("/directors")
   end
