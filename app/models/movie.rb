@@ -13,5 +13,6 @@
 #  director_id :integer
 #
 class Movie < ApplicationRecord
-  belongs_to :director, optional: true
+  validates(:director_id, presence: true)
+  validates(:title, uniqueness: true)
 end

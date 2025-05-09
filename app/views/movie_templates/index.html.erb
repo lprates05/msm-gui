@@ -80,8 +80,7 @@
       <% matching_directors = Director.where({ :id => a_movie.director_id }) %>
       
       <% the_director = matching_directors.at(0) %>
-      
-      <%= a_movie.director&.name || "Unknown Director" %>
+    
     </td>
 
     <td>

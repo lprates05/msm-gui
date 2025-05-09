@@ -16,17 +16,21 @@ class MoviesController < ApplicationController
   end
 
   def create_new_movie
-    new_movie = Movie.new
+    @new_movie = Movie.new
  
-      new_movie.title = params.fetch("new_movie_title")
-      new_movie.year = params.fetch("new_movie_year")
-      new_movie.duration = params.fetch("new_movie_duration")
-      new_movie.description = params.fetch("new_movie_description")
-      new_movie.image = params.fetch("new_movie_image")
-      new_movie.director_id = params.fetch("new_movie_director_id")  
-      new_movie.save
-  
-     redirect_to("/movies")
+      @new_movie.title = params.fetch("new_movie_title")
+      @new_movie.year = params.fetch("new_movie_year")
+      @new_movie.description = params.fetch("new_movie_description")
+      @new_movie.image = params.fetch("new_movie_image")
+      @new_movie.director_id = params.fetch("new_movie_director_id")
+      
+      if @new_movie.valid?
+      @new_movie.save
+      redirect_to("/movies",{:notice => "Movie created successfully."})
+        
+      else
+      redirect_to("/movies",{:notice => "Movie failed to create successfully."})
+      end
    end  
 
   def destroy
